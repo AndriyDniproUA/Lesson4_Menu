@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 import static java.lang.Math.PI;
 
-abstract class UserAction {
-    public abstract void doAction();
-    public abstract String getName();
+interface UserAction {
+    void doAction();
+    String getName();
     }
-}
 
 
-class CircleAreaUserAction extends UserAction {
+
+class CircleAreaUserAction implements UserAction {
     Scanner sc;
 
     public CircleAreaUserAction(Scanner sc) {
@@ -33,7 +33,7 @@ class CircleAreaUserAction extends UserAction {
     }
 }
 
-class RectAreaUserAction extends UserAction {
+class RectAreaUserAction implements UserAction {
     Scanner sc;
 
     public RectAreaUserAction(Scanner sc) {
